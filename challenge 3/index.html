@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<nav>
+	<div class="logo">
+		<img src="logo/logo.svg" width="190" height="35">
+	</div>
+	<div class="menu">
+		<ul id="mySidenav">
+			<img src="logo/logo.svg" width="190" height="35">
+			
+			<li>
+				<a href="javascript:void(0)" class="closebtn">&times;
+				</a>
+			</li>			
+			<li class="list">About</li>
+			<li class="list">Careers</li>
+			<li class="list">Events</li>
+			<li class="list">Products</li>
+			<li class="list">Support</li>
+		</ul>	
+	</div>
+		<span class="openbtn" style="font-size:30px;cursor:pointer">&#9776;</span>
+
+</nav>
+
+<div class="container">
+	<div class="hero">
+		<img src="img/image-hero.jpg">
+		<div class="text">
+			<p>
+			IMMERSIVE EXPERIENCES THAT DELIVER
+			</p>	
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="image">
+			<img src="img/image-interactive.jpg">	
+		</div>
+		<div class="caption">
+			<h1>
+				THE LEADER IN INTERACTIVE VR
+			</h1>
+			<p>	
+				Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe.Our award-winning  creations have transformed businesses through digital experiences that bind to their brand. 
+			</p>
+		</div>		
+	</div>
+
+	<div class="creations">
+			<div class="creation">
+				<h1>OUR CREATIONS</h1>
+			</div>
+			<div class="seeAll">
+				<button>SEE ALL</button>
+			</div>
+	</div>
+
+	<div class="gallery">
+		<div class="earth">
+			<div class="picture"></div>
+			<h1 class="deep">DEEP EARTH</h1>
+		</div>
+
+		<div class="night">
+			<div class="picture1"></div>
+			<h1 class="arcade">NIGHT ARCADE</h1>
+		</div>
+		
+		<div class="soccer">
+			<div class="picture2"></div>
+			<h1 class="team">SOCCER TEAM VR</h1>
+		</div>
+
+		<div class="grid">
+			<div class="picture3"></div>
+			<h1 class="grid1">THE GRID</h1>
+		</div>
+		
+		<div class="from">
+			<div class="picture4"></div>
+			<h1 class="above">FROM UP ABOVE VR</h1>
+		</div>
+		
+		<div class="pocket">
+			<div class="picture5"></div>
+			<h1 class="boreals">POCKET BOREALS</h1>
+		</div>
+		
+		<div class="curiosity">
+			<div class="picture6"></div>
+			<h1 class="curiosity1">THE CURIOSITY</h1>
+		</div>
+
+		<div class="make">
+			<div class="picture7" ></div>
+			<h1 class="fisheye">MAKE IT FISH EYE</h1>
+		</div>
+	
+		<div class="seeAllMobile">
+			<button>SEE ALL</button>
+		</div>
+	</div>
+
+	
+
+	<div class="footer">
+		<div class="leftmenu">
+			<div class="logofooter">
+				<img src="logo/logo.svg" width="195" height="35">	
+			</div>
+			<div class="menufooter">
+				<ul>
+					<li>About</li>
+					<li>Careers</li>
+					<li>Events</li>
+					<li>Products</li>
+					<li>Support</li>
+				</ul>	
+			</div>
+		</div>
+		
+		<div class="rightmenu">
+			<div class="iconmenu">
+				<img src="logo/icon-facebook.svg">
+				<img src="logo/icon-twitter.svg">
+				<img src="logo/icon-pinterest.svg">
+				<img src="logo/icon-instagram.svg">
+			</div>
+			<div class="copyright">
+				<p>2022 Loopstudios. All rights reserved</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script type="text/javascript">
+
+const open = document.querySelector('.openbtn');
+const close = document.querySelector('.closebtn');
+const nav = document.querySelector('nav .menu ul');
+const body = document.querySelector('body');
+const list = document.querySelectorAll(' nav .menu ul .list');
+
+
+open.addEventListener('click',function(){
+	nav.classList.toggle('slide');
+	nav.style.transition='0.5s';
+	body.style.overflowY='hidden';
+
+	for(let i=0;i<=list.length-1;i++){
+
+		list[i].style.textTransform='uppercase';	
+	}
+
+
+	
+});
+
+close.addEventListener('click',function(){
+	nav.classList.toggle('slide');
+	nav.style.transition='0.5s';
+	body.style.overflowY='visible';
+	for(let i=0;i<=list.length-1;i++){
+
+		list[i].style.textTransform='capitalize';	
+	}
+});
+
+
+</script>
+</body>
+</html>
